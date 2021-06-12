@@ -22,7 +22,11 @@ export const useAsyncEffect = (callback, dependencyList) => {
 
     callback(promise =>
       promise.then(item => (isMounted ? new Mounted(item) : new Unmounted()))
-    );
+    ).catch(error => {
+      if (isMounted) {
+        throw error;
+      }
+    });
 
     return () => {
       isMounted = false;
