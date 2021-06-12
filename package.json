@@ -1,0 +1,22 @@
+{
+  "name": "use-async-effekt",
+  "version": "1.0.1",
+  "description": "useAsyncEffect(resolve => happy(), [])",
+  "main": "dist/index.js",
+  "types": "types",
+  "keywords": [
+    "react",
+    "hooks",
+    "async",
+    "await",
+    "effect"
+  ],
+  "author": "Danuel <public.danuel@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.11"
+  }
+}
