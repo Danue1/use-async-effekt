@@ -1,6 +1,6 @@
 {
   "name": "use-async-effekt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "useAsyncEffect(resolve => happy(), [])",
   "main": "dist/index.js",
   "types": "types",
