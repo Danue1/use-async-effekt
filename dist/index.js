@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { DependencyList, useEffect, useState } from "react";
 
 class Unmounted {
   //
@@ -9,6 +9,12 @@ class Mounted {
     this.item = item;
   }
 }
+
+const UNMOUNTED = new Unmounted();
+
+export const unmounted = () => UNMOUNTED;
+
+export const mounted = item => new Mounted(item);
 
 export const isUnmounted = state => state instanceof Unmounted;
 
@@ -21,7 +27,7 @@ export const useAsyncEffect = (callback, dependencyList) => {
     let isMounted = true;
 
     callback(promise =>
-      promise.then(item => (isMounted ? new Mounted(item) : new Unmounted()))
+      promise.then(item => (isMounted ? mounted(item) : unmounted()))
     ).catch(error => {
       if (isMounted) {
         throw error;
