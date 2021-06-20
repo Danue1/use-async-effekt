@@ -1,6 +1,6 @@
 {
   "name": "use-async-effekt",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "useAsyncEffect(resolve => happy(), [])",
   "main": "dist/index.js",
   "types": "types",
@@ -12,6 +12,7 @@
     "effect"
   ],
   "author": "Danuel <public.danuel@gmail.com>",
+  "repository": "https://github.com/Danue1/use-async-effekt",
   "license": "MIT",
   "dependencies": {
     "react": "^17.0.2"
