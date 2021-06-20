@@ -36,7 +36,7 @@ export const useAsyncEffect = (
     let isMounted = true;
 
     callback(promise =>
-      promise.then(item => (isMounted ? mounted(item) : unmounted))
+      promise.then(item => (isMounted ? mounted(item) : unmounted()))
     ).catch(error => {
       if (isMounted) {
         throw error;
